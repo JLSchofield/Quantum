@@ -49,6 +49,9 @@ public class Quantum : MonoBehaviour
     [SerializeField]
     float movingTime;
 
+    [Header("Feynmann")]
+    GameObject[] createdBlasts;
+
 
     // Use this for initialization
     void Start()
