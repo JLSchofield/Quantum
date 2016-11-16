@@ -37,6 +37,8 @@ public class Feynmann : MonoBehaviour
     }
     FeynmannState currentState;
 
+    //delegate FeynmannState
+
     void Start()
     {
         //get left and right hand positions
@@ -98,11 +100,26 @@ public class Feynmann : MonoBehaviour
 
     void MoveToCollision()
     {
-
+        StartCoroutine(MoveIEnum(particle1, leftHand,  collisionPoint, particleSpeed));
+        StartCoroutine(MoveIEnum(particle2, rightHand, collisionPoint, particleSpeed));
     }
 
-    IEnumerator MoveIEnum(Vector3 startPosition, Vector3 endPosition, float speed)
+    IEnumerator MoveIEnum(GameObject go, Vector3 startPosition, Vector3 endPosition, float speed)
     {
-        yield return 0;
+        float startTime = Time.time;
+        float currentTime = startTime;
+        //calculate the time it'll take to complete the lerp
+        float timeToComplete = Vector3.Distance(startPosition, endPosition) * Time.deltaTime / speed;
+
+        while(currentTime - startTime < timeToComplete)
+        {
+            //lerp between start and end
+            go.transform.position = Vector3.Lerp(startPosition, endPosition, (currentTime - startTime) / timeToComplete);
+            //increase time
+            currentTime += Time.deltaTime;
+            yield return 0;
+        }
+        //finished lerping
+        
     }
 }
