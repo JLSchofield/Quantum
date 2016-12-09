@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B5784707-853A-E5E6-B7F1-70CC26CA32E1}</ProjectGuid>
+    <ProjectGuid>{37926826-3427-7906-5462-47E06FCB2C33}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -68,9 +68,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Feynmann.cs" />
-    <Compile Include="Assets\Particle.cs" />
-    <Compile Include="Assets\Quantum.cs" />
+    <Compile Include="Assets\Boss\Feynmann.cs" />
+    <Compile Include="Assets\Boss\Particle.cs" />
+    <Compile Include="Assets\Boss\Quantum.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRBoundary.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRDebugHeadController.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRDisplay.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRHaptics.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRHapticsClip.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRInput.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRManager.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVROnCompleteListener.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVROverlay.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRPlatformMenu.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRPlugin.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRProfile.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRTouchpad.cs" />
+    <Compile Include="Assets\OVR\Scripts\OVRTracker.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRChromaticAberration.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRCubemapCapture.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRDebugInfo.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRGridCube.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRModeParms.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRMonoscopic.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRPlayerController.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRRTOverlayConnector.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRResetOrientation.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
+    <Compile Include="Assets\OVR\Scripts\Util\OVRWaitCursor.cs" />
+    <Compile Include="Assets\Player\Bullet.cs" />
+    <Compile Include="Assets\Player\Gun.cs" />
+    <Compile Include="Assets\Player\Player.cs" />
+    <Compile Include="Assets\Player\Sword.cs" />
+    <Compile Include="Assets\Player\Weapon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
